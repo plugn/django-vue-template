@@ -3,6 +3,11 @@
   <body>
     {% block content %}
     {% endblock %}
+    {% if env == 'production' %}
+      <!-- Import production only bundles in correct order i.e webpackJsonp -->
+      {% render_bundle 'manifest' %}
+      {% render_bundle 'vendor' %}
+    {% endif %}
     {% render_bundle 'app' %}
   </body>
 </html>
