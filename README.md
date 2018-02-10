@@ -3,6 +3,7 @@
 Fork of https://github.com/ariera/django-vue-template adding:
 * Django 2.0
 * Configuration for Vagrant development
+  * Accessing dev server from host machine
 * Configuration for Heroku deployment
 
 ## Installation
@@ -53,7 +54,7 @@ npm run dev
 python manage.py runserver
 ```
 
-On the **host machine** point browser to http://10.10.10.61:8000, but test that you can also access the pure Django world, for example by going to the admin panel http://10.10.10.61:8000/admin
+On the **host machine** point browser to http://10.10.10.61:8000, but test that you can also access the pure Django world, for example by going to the admin panel http://10.10.10.61:8000/admin. If your VM has port forwarding set up correctly, you should be able to use http://localhost:8000.
 
 ## Tests
 
